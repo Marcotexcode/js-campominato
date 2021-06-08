@@ -47,9 +47,18 @@ for (var i = 0; totNumUtente.length < 5; i ++) { // Ricordarsi di cambiare a 100
 
     var numUtente = parseInt(prompt("inserici numero da 1 a 100 senza ripetizioni"));
 
+
+
+
+
+
+
 // Comprendere i numeri da 1 a 100 non oltre
-    if ( numUtente > 100 || numUtente < 1 ){
+    if ( numUtente > 100 || numUtente < 1){
         alert('numero non valido ');
+
+    }else if (totNumUtente.includes(numUtente)) {
+        alert('numero gia inserito');
 
     }else {
         totNumUtente.push(numUtente);
@@ -57,10 +66,9 @@ for (var i = 0; totNumUtente.length < 5; i ++) { // Ricordarsi di cambiare a 100
     }
 
 // non puo inserire lo stesso numero
-    if (!totNumUtente.includes(numUtente)) {
-        alert('numero gia inserito');
-    }
+
     
+
 }
 
 
