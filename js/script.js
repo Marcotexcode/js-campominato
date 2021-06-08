@@ -45,22 +45,22 @@ var totNumUtente = [];
 // Inserire numeri compresi da 1 a 100 84 volte
 for (var i = 0; totNumUtente.length < 5; i ++) { // Ricordarsi di cambiare a 100 - 16
 
-    var numUtente = parseInt(prompt("inserici numero da 1 a 100 "));
+    var numUtente = parseInt(prompt("inserici numero da 1 a 100 senza ripetizioni"));
 
 // Comprendere i numeri da 1 a 100 non oltre
-    if ( numUtente > 100 || numUtente < 1 ) {
-        numUtente = alert('numero non valido ');
+    if ( numUtente > 100 || numUtente < 1 ){
+        alert('numero non valido ');
 
     }else {
         totNumUtente.push(numUtente);
     
     }
-    
-// non puo inserire lo stesso numero
-    if (numUtente == totNumUtente) {
-        numUtente = alert('numero gia inserito');
-    }
 
+// non puo inserire lo stesso numero
+    if (!totNumUtente.includes(numUtente)) {
+        alert('numero gia inserito');
+    }
+    
 }
 
 
