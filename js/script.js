@@ -34,7 +34,7 @@ while(numComputer.length < 16){
 
 console.log(numComputer);
 
-
+var risultato;
 
 // 2- Chiedere all utente di inserire 84 volte un numero compreso tra 1 e 100 
 // non puo inserire lo stesso numero
@@ -43,7 +43,7 @@ console.log(numComputer);
 var totNumUtente = [];
 
 // Inserire numeri compresi da 1 a 100 84 volte
-for (var i = 0; totNumUtente.length < 5; i ++) { // Ricordarsi di cambiare a 100 - 16
+for (var i = 0; totNumUtente.length < 100 - 16; i ++) { // Ricordarsi di cambiare a 100 - 16
 
     var numUtente = parseInt(prompt("inserici numero da 1 a 100 senza ripetizioni"));
 
@@ -65,19 +65,18 @@ for (var i = 0; totNumUtente.length < 5; i ++) { // Ricordarsi di cambiare a 100
 
     }else {
 
+// 4- Al termine della partita il software deve comunicare il punteggio, cioè il numero di volte che l’utente ha inserito un numero consentito.
+        risultato  =  totNumUtente.length + 1;
         totNumUtente.push(numUtente);
 
     }
 
 }
 
+
+
 // 4- Al termine della partita il software deve comunicare il punteggio, cioè il numero di volte che l’utente ha inserito un numero consentito.
-
-
-
-
-
-
+console.log('Il tuo punteggio e: ' + risultato);
 
 
 
