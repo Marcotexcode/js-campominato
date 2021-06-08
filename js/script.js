@@ -55,14 +55,15 @@ for (var i = 0; totNumUtente.length < 5; i ++) { // Ricordarsi di cambiare a 100
         totNumUtente.push(numUtente);
     
     }
-
-    if (totNumUtente.length == totNumUtente) {
+    
+// non puo inserire lo stesso numero
+    if (numUtente == totNumUtente) {
         numUtente = alert('numero gia inserito');
     }
 
 }
 
-// non puo inserire lo stesso numero
+
 
 
 
