@@ -43,18 +43,28 @@ console.log(numComputer);
 var totNumUtente = [];
 
 // Inserire numeri compresi da 1 a 100 84 volte
-for (var i = 0; totNumUtente.length < 10; i ++) {
+for (var i = 0; totNumUtente.length < 5; i ++) { // Ricordarsi di cambiare a 100 - 16
 
-    var numUtente = totNumUtente.push(prompt("inserici numero da 1 a 100 "));
-}
+    var numUtente = parseInt(prompt("inserici numero da 1 a 100 "));
 
 // Comprendere i numeri da 1 a 100 non oltre
-if ( numUtente >100) {
-    numUtente = false;
-}else {
-    numUtente = true;
+    if ( numUtente > 100 || numUtente < 1 ) {
+        numUtente = alert('numero non valido ');
+
+    }else {
+        totNumUtente.push(numUtente);
+    
+    }
+
+    if (totNumUtente.length == totNumUtente) {
+        numUtente = alert('numero gia inserito');
+    }
 
 }
+
+// non puo inserire lo stesso numero
+
+
 
 
 console.log(totNumUtente);
