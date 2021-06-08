@@ -18,10 +18,8 @@
 
 
 // 1- Generare 16 numeri casuali tra 1 e 100
-
+// I numeri non possono essere duplicati.
 var numComputer = [];
-
-
 
 
 // Generare 16 numeri casuali da 1 a 100
@@ -38,10 +36,36 @@ console.log(numComputer);
 
 
 
+// 2- Chiedere all utente di inserire 84 volte un numero compreso tra 1 e 100 
+// non puo inserire lo stesso numero
+
+// tot numeri inseriti dall utente
+var totNumUtente = [];
+
+// Inserire numeri compresi da 1 a 100 84 volte
+for (var i = 0; totNumUtente.length < 10; i ++) {
+
+    var numUtente = totNumUtente.push(prompt("inserici numero da 1 a 100 "));
+}
+
+// Comprendere i numeri da 1 a 100 non oltre
+if ( numUtente >100) {
+    numUtente = false;
+}else {
+    numUtente = true;
+
+}
+
+
+console.log(totNumUtente);
 
 
 
 
+
+
+
+//FUNZIONI
 
 // Funzione per numeri casuali
 function randomNumber(min,max) {
