@@ -18,3 +18,32 @@
 
 
 // 1- Generare 16 numeri casuali tra 1 e 100
+
+var numComputer = [];
+
+
+
+
+// Generare 16 numeri casuali da 1 a 100
+while(numComputer.length < 16){
+
+    var numeroRandom = randomNumber(1,100);
+
+    if(!numComputer.includes(numeroRandom)){
+        numComputer.push(numeroRandom);
+    }
+}
+
+console.log(numComputer);
+
+
+
+
+
+
+
+
+// Funzione per numeri casuali
+function randomNumber(min,max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
