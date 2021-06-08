@@ -60,7 +60,7 @@ for (var i = 0; totNumUtente.length < 100 - 16; i ++) { // Ricordarsi di cambiar
     }else if(numComputer.includes(numUtente)) {
 
 // 3- Controllare se il numero dell utente e presente nei numeri generati dall computer se e si allora la partita termina altrimenti continua
-        totNumUtente = totNumUtente.pop();
+        totNumUtente = totNumUtente.pop(); 
         alert('partita termintata') ;
 
     }else {
