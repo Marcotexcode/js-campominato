@@ -47,36 +47,34 @@ for (var i = 0; totNumUtente.length < 5; i ++) { // Ricordarsi di cambiare a 100
 
     var numUtente = parseInt(prompt("inserici numero da 1 a 100 senza ripetizioni"));
 
-
-
-
-
-
-
 // Comprendere i numeri da 1 a 100 non oltre
     if ( numUtente > 100 || numUtente < 1){
+
         alert('numero non valido ');
 
+// non puo inserire lo stesso numero
     }else if (totNumUtente.includes(numUtente)) {
+
         alert('numero gia inserito');
 
+    }else if(numComputer.includes(numUtente)) {
+
+// 3- Controllare se il numero dell utente e presente nei numeri generati dall computer se e si allora la partita termina altrimenti continua
+        totNumUtente = totNumUtente.pop();
+        alert('partita termintata') ;
+
     }else {
+
         totNumUtente.push(numUtente);
-    
+
     }
-
-// non puo inserire lo stesso numero
-
-    
 
 }
 
+// 4- Al termine della partita il software deve comunicare il punteggio, cioè il numero di volte che l’utente ha inserito un numero consentito.
 
 
 
-
-
-console.log(totNumUtente);
 
 
 
