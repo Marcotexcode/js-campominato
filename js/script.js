@@ -14,27 +14,57 @@
 // casuali: con difficoltà 0 => tra 1 e 100 con difficoltà 1 => tra 1 e 80 con difficoltà 2 => tra 1 e 50
 
 
-
-
-
 // 1- Generare 16 numeri casuali tra 1 e 100
 // I numeri non possono essere duplicati.
 var numComputer = [];
 
 
-// Generare 16 numeri casuali da 1 a 100
-while(numComputer.length < 16){
 
-    var numeroRandom = randomNumber(1,100);
+// BONUS: (da fare solo se funziona tutto il resto) all’inizio il software richiede anche una difficoltà all’utente che cambia il range di numeri 
+// casuali: con difficoltà 0 => tra 1 e 100 con difficoltà 1 => tra 1 e 80 con difficoltà 2 => tra 1 e 50
 
-    if(!numComputer.includes(numeroRandom)){
-        numComputer.push(numeroRandom);
-    }
+
+var difficolta = parseInt(prompt('scegli la difficolta tra 0 , 1 , 2'));
+
+switch (difficolta) {
+    case 0:
+        while(numComputer.length < 16){
+            // Generare 16 numeri casuali da 1 a 100
+            var numeroRandom = randomNumber(1,100);
+        
+            if(!numComputer.includes(numeroRandom)){
+                numComputer.push(numeroRandom);
+            }
+        }
+        break;
+        
+    case 1:
+        while(numComputer.length < 16){
+            // Generare 16 numeri casuali da 1 a 80
+            var numeroRandom = randomNumber(1,80);
+        
+            if(!numComputer.includes(numeroRandom)){
+                numComputer.push(numeroRandom);
+            }
+        }
+        break;
+
+    case 2:
+        while(numComputer.length < 16){
+            // Generare 16 numeri casuali da 1 a 50
+            var numeroRandom = randomNumber(1,50);
+        
+            if(!numComputer.includes(numeroRandom)){
+                numComputer.push(numeroRandom);
+            }
+        }
+        break;
+
+    default:
+        break;
 }
 
 console.log(numComputer);
-
-var risultato;
 
 // 2- Chiedere all utente di inserire 84 volte un numero compreso tra 1 e 100 
 // non puo inserire lo stesso numero
@@ -42,8 +72,12 @@ var risultato;
 // tot numeri inseriti dall utente
 var totNumUtente = [];
 
+
+
+
+
 // Inserire numeri compresi da 1 a 100 84 volte
-for (var i = 0; totNumUtente.length < 100 - 16; i ++) { // Ricordarsi di cambiare a 100 - 16
+for (var i = 0; totNumUtente.length < 100 - 16; i ++) { 
 
     var numUtente = parseInt(prompt("inserici numero da 1 a 100 senza ripetizioni"));
 
@@ -60,9 +94,8 @@ for (var i = 0; totNumUtente.length < 100 - 16; i ++) { // Ricordarsi di cambiar
     }else if(numComputer.includes(numUtente)) {
 
 // 3- Controllare se il numero dell utente e presente nei numeri generati dall computer se e si allora la partita termina altrimenti continua
-        totNumUtente = totNumUtente.pop(); 
-        alert('partita termintata') ;
-
+        alert('partita termintata');
+        break; 
     }else {
 
 // 4- Al termine della partita il software deve comunicare il punteggio, cioè il numero di volte che l’utente ha inserito un numero consentito.
@@ -76,7 +109,26 @@ for (var i = 0; totNumUtente.length < 100 - 16; i ++) { // Ricordarsi di cambiar
 
 
 // 4- Al termine della partita il software deve comunicare il punteggio, cioè il numero di volte che l’utente ha inserito un numero consentito.
+var risultato;
 console.log('Il tuo punteggio e: ' + risultato);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -87,3 +139,9 @@ console.log('Il tuo punteggio e: ' + risultato);
 function randomNumber(min,max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
+
+
+
+
+
+
