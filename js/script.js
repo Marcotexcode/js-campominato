@@ -24,7 +24,11 @@ var numComputer = [];
 // casuali: con difficoltà 0 => tra 1 e 100 con difficoltà 1 => tra 1 e 80 con difficoltà 2 => tra 1 e 50
 
 
+
+
 var difficolta = parseInt(prompt('scegli la difficolta tra 0 , 1 , 2'));
+
+document.getElementById('diff').innerHTML = 'Hai scelto difficolta: ' + difficolta;
 
 switch (difficolta) {
     case 0:
@@ -65,15 +69,13 @@ switch (difficolta) {
 }
 
 console.log(numComputer);
+document.getElementById('numComputer').innerHTML = 'Il computer ha scelto: ' + numComputer;
 
 // 2- Chiedere all utente di inserire 84 volte un numero compreso tra 1 e 100 
 // non puo inserire lo stesso numero
 
 // tot numeri inseriti dall utente
 var totNumUtente = [];
-
-
-
 
 
 // Inserire numeri compresi da 1 a 100 84 volte
@@ -95,6 +97,7 @@ for (var i = 0; totNumUtente.length < 100 - 16; i ++) {
 
 // 3- Controllare se il numero dell utente e presente nei numeri generati dall computer se e si allora la partita termina altrimenti continua
         alert('partita termintata');
+        document.getElementById('numUtente').innerHTML = 'i numeri che hai scelto sono : ' + totNumUtente;
         break; 
     }else {
 
@@ -111,18 +114,7 @@ for (var i = 0; totNumUtente.length < 100 - 16; i ++) {
 // 4- Al termine della partita il software deve comunicare il punteggio, cioè il numero di volte che l’utente ha inserito un numero consentito.
 var risultato;
 console.log('Il tuo punteggio e: ' + risultato);
-
-
-
-
-
-
-
-
-
-
-
-
+document.getElementById('punteggio').innerHTML = 'Il tuo punteggio e: ' + risultato;
 
 
 

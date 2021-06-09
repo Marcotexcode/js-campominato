@@ -1,0 +1,41 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
+.container  {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(32, 21, 21);
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+
+.main {
+    width: 80%;
+    margin: 0px auto; 
+    background-color: rgb(112, 6, 6);
+    border-radius: 20px;
+    text-align: center;
+    padding: 40px;
+}
+
+
+.difficolta {
+    padding: 20px;
+}
+
+.punteggio-tot h2, .punteggio-tot h3{
+   margin: 50px;
+}
